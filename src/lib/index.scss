@@ -1,0 +1,91 @@
+@import "./variables";
+
+.flip-card {
+    height: 100%;
+    width: 100%;
+
+    &__inner {
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform .3s;
+        width: 100%;
+    }
+
+    &:hover &__inner {
+        transform: scale($flip-scale);
+    }
+
+    &__front,
+    &__back {
+        align-content: flex-end;
+        backface-visibility: hidden;
+        box-sizing: border-box;
+        display: flex;
+        height: 100%;
+        padding: 40px 24px;
+        position: absolute;
+        width: 100%;
+    }
+
+    &__front {
+        background-color: $color-front-bg;
+        color: $color-front-text;
+        cursor: pointer;
+        font-size: 24px;
+        line-height: 32px;
+        transition: background-color .3s;
+    }
+
+    &:hover &__front {
+        background-color: $color-front-bg-hover;
+    }
+
+    &__back {
+        background: $color-back-bg;
+        color: $color-back-text;
+        font-size: 14px;
+        line-height: 24px;
+        transform: rotateY(180deg);
+    }
+
+    &__caption,
+    &__text {
+        align-self: flex-end;
+    }
+
+    &__close,
+    &__expand {
+        background-size: 32px;
+        cursor: pointer;
+        height: 32px;
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        width: 32px;
+    }
+
+    &__close {
+        background-image: $icon-close;
+        opacity: .3;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__expand {
+        background-image: $icon-info;
+        opacity: .7;
+        transition: opacity .3s;
+    }
+
+    &:hover &__expand {
+        opacity: 1;
+    }
+
+    &.m-open &__inner {
+        transform: rotateY(180deg) scale($flip-scale);
+    }
+}

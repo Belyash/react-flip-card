@@ -37,6 +37,10 @@
     "react-scripts": "3.0.0",
     "typescript": "^3.4.5"
   },
+  "peerDependencies": {
+    "react": "^16.x",
+    "react-dom": "^16.x"
+  },
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",

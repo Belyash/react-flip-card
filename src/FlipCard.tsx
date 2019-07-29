@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React, { CSSProperties as ICSSProperties } from 'react';
 
 import './index.scss';
@@ -6,7 +5,7 @@ import './index.scss';
 /**
  * Component properties.
  */
-interface IProps {
+export interface IFlipCardProps {
     /** Caption on front side. */
     caption: string;
 
@@ -30,10 +29,10 @@ interface IState {
 /**
  * Checkbox component.
  */
-export class FlipCard extends React.Component<IProps, IState> {
+export class FlipCard extends React.Component<IFlipCardProps, IState> {
     public static displayName: string = 'FlipCard';
 
-    constructor (props: IProps) {
+    constructor (props: IFlipCardProps) {
         super(props);
 
         this.state = {
@@ -73,7 +72,7 @@ export class FlipCard extends React.Component<IProps, IState> {
         }
 
         return (
-            <div className={classNames('flip-card', { 'm-open': isOpen })} style={style}>
+            <div className={`flip-card ${ isOpen ? 'm-open' : '' }`} style={style}>
                 <div className="flip-card__inner">
                     <div className="flip-card__front" onClick={this.handleChange}>
                         <div className="flip-card__expand" />

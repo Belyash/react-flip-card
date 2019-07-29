@@ -6,12 +6,13 @@ See [demo](https://belyash.github.io/react-flip-card/)
 
 ## Basic Usage
 
-First of all, remember to import the component.
+First of all, remember to import the component and styles.
 
 ```jsx
 import React from "react"
 
-import { FlipCard } from "react-flip-card"
+import { FlipCard } from 'react-flip-card'
+import 'react-flip-card/index.css';
 
 function Application() {
 

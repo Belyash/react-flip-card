@@ -5,17 +5,13 @@
 /.pnp
 .pnp.js
 
-# developing
-/.rpt2_cache
-
 # testing
 /coverage
 
 # production
-/dist
+/build
 
 # misc
-.idea
 .DS_Store
 .env.local
 .env.development.local
@@ -25,3 +21,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/reactComponentLib

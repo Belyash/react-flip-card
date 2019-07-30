@@ -1,6 +1,7 @@
 {
   "name": "example",
   "version": "0.1.0",
+  "homepage": "http://belyash.github.io/react-flip-card",
   "private": true,
   "dependencies": {
     "react": "^16.8.4",
